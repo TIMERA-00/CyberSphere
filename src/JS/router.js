@@ -1,12 +1,13 @@
 const mesPages=['accueil','Login', 'Inscription', 'Dashboard'];
 
 const chemins = {
-    '/' : 'accueil',
+    '' : 'accueil',
     'login' : 'Login',
-    'dashboard' : 'Dashboard',
+    'inscription' : 'Inscription',
+    'dashboard' : 'Dashboard'
 }
 
-const pageProteger=['dashboard'];
+const pageProteger=['Dashboard'];
 
 function isLoggedIn(){
     return sessionStorage.getItem('isLoggedIn') === 'true';
@@ -22,7 +23,7 @@ const afficher = async (chemin) => {
     if(!app) return;
 
     const pageName= chemins[chemin];
-    if (pageProteger.includes(pageName) && isLoggedIn()){
+    if (pageProteger.includes(pageName) && !isLoggedIn()){
         cheminActuel = null;
         location.hash = 'login';
         return;
@@ -43,6 +44,7 @@ const afficher = async (chemin) => {
         console.error(`Erreur de chargement : ${error}`);
         app.innerHTML = '<h1>Erreur technique</h1>';
     }
+    console.log('pageName =', pageName);
 };
 
 const navigation = (chemin) => {
@@ -56,8 +58,11 @@ const logout = () =>{
 }
 
 const handleHashChange = async () => {
-    const chemin = window.location.hash.replace('#', '') || '/';
+    const chemin = window.location.hash.replace(/^#\/?/, '') || '';
     await afficher(chemin);
+    console.log('hash changé :', chemin);
+    
+    
 };
 
 const initRouter = () => {
