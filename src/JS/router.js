@@ -1,7 +1,7 @@
 const mesPages=['accueil','Login', 'Inscription', 'Dashboard'];
 
 const chemins = {
-    ' ' : 'acceuil',
+    '/' : 'accueil',
     'login' : 'Login',
     'dashboard' : 'Dashboard',
 }
@@ -22,7 +22,7 @@ const afficher = async (chemin) => {
     if(!app) return;
 
     const pageName= chemins[chemin];
-    if (pageProteger.includes(pageName)){
+    if (pageProteger.includes(pageName) && isLoggedIn()){
         cheminActuel = null;
         location.hash = 'login';
         return;
@@ -34,7 +34,7 @@ const afficher = async (chemin) => {
         if(!pageName || !mesPages.includes(pageName)){
             pageModule = await import('../Pages/NotFound/NotFound.js');
         } else {
-            pageModule = await import('../Pages/${pageName}/${pageName}.js');
+            pageModule = await import(`../Pages/${pageName}/${pageName}.js`);
         }
         const page = pageModule.default;
         app.innerHTML = page();

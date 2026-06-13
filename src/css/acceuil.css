@@ -1,0 +1,117 @@
+@import './main.css';
+@import './variable.css';
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--espacement-lg) var(--espacement-xxl);
+  background: var(--fond-surface);
+  border-bottom: 1px solid var(--bordure-legere);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar-logo {
+  font-size: var(--taille-titre);
+  font-weight: 700;
+  color: var(--couleur-marque-principale);
+}
+
+.navbar-logo span {
+  color: var(--couleur-marque-secondaire);
+}
+
+.btn-connexion {
+  padding: var(--espacement-sm) var(--espacement-xl);
+  background: var(--couleur-marque-secondaire-foncee);
+  color: white;
+  border: none;
+  border-radius: var(--arrondi-md);
+  font-size: var(--taille-texte-md);
+  font-family: var(--police-principale);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.hero {
+  text-align: center;
+  padding: 80px var(--espacement-xxl) 60px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hero-titre {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--couleur-marque-principale);
+  margin-bottom: var(--espacement-lg);
+  line-height: 1.2;
+}
+
+.hero-titre span {
+  color: var(--couleur-marque-secondaire);
+}
+
+.hero-description {
+  font-size: var(--taille-texte-xl);
+  color: var(--texte-secondaire);
+  margin-bottom: var(--espacement-xxl);
+  line-height: 1.6;
+}
+
+.btn-cta {
+  padding: var(--espacement-md) var(--espacement-xxl);
+  background: var(--couleur-marque-secondaire-foncee);
+  color: white;
+  border: none;
+  border-radius: var(--arrondi-md);
+  font-size: var(--taille-texte-lg);
+  font-family: var(--police-principale);
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.section-piliers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--espacement-xl);
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 var(--espacement-xxl) 80px;
+}
+
+.carte-pilier {
+  background: var(--fond-surface);
+  border-radius: var(--arrondi-lg);
+  border: 1px solid var(--bordure-legere);
+  padding: var(--espacement-xxl) var(--espacement-xl);
+  text-align: center;
+}
+
+.carte-pilier-icone {
+  font-size: 40px;
+  margin-bottom: var(--espacement-lg);
+}
+
+.carte-pilier-titre {
+  font-size: var(--taille-texte-lg);
+  font-weight: 700;
+  color: var(--couleur-marque-principale);
+  margin-bottom: var(--espacement-sm);
+}
+
+.carte-pilier-description {
+  font-size: var(--taille-texte-md);
+  color: var(--texte-secondaire);
+  line-height: 1.6;
+}
+
+.footer {
+  text-align: center;
+  padding: var(--espacement-xl);
+  border-top: 1px solid var(--bordure-legere);
+  font-size: var(--taille-texte-sm);
+  color: var(--texte-desactive);
+}

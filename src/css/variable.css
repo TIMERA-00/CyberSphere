@@ -1,0 +1,54 @@
+:root {
+
+
+  --couleur-marque-principale: #0f1535;
+  --couleur-marque-secondaire: #378ADD;
+  --couleur-marque-secondaire-foncee: #185FA5;
+  --couleur-marque-secondaire-claire: #E6F1FB;
+
+  --fond-page: #f5f6fa;
+  --fond-surface: #ffffff;
+
+  --couleur-erreur: #E24B4A;
+  --couleur-avertissement: #EF9F27;
+  --couleur-information: #378ADD;
+  --couleur-succes: #639922;
+  --couleur-accent: #7F77DD;
+
+  --fond-erreur: #FCEBEB;
+  --fond-avertissement: #FAEEDA;
+  --fond-information: #E6F1FB;
+  --fond-succes: #EAF3DE;
+  --fond-accent: #EEEDFE;
+
+  --texte-principal: #1a1a2e;
+  --texte-secondaire: #666666;
+  --texte-desactive: #aaaaaa;
+
+  --bordure-legere: #eeeeee;
+  --bordure-standard: #dddddd;
+
+  --police-principale: 'Segoe UI', system-ui, sans-serif;
+  --police-code: 'Courier New', monospace;
+
+  --taille-texte-xs: 11px;
+  --taille-texte-sm: 12px;
+  --taille-texte-md: 13px;
+  --taille-texte-lg: 15px;
+  --taille-texte-xl: 18px;
+  --taille-titre: 22px;
+
+  --espacement-xs: 4px;
+  --espacement-sm: 8px;
+  --espacement-md: 12px;
+  --espacement-lg: 16px;
+  --espacement-xl: 24px;
+  --espacement-xxl: 32px;
+
+  --arrondi-sm: 6px;
+  --arrondi-md: 8px;
+  --arrondi-lg: 12px;
+  --arrondi-complet: 20px;
+
+  --largeur-menu-lateral: 220px;
+}

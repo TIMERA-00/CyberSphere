@@ -1,0 +1,46 @@
+@import './variable.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--police-principale);
+  background: var(--fond-page);
+  color: var(--texte-principal);
+  font-size: var(--taille-texte-md);
+}
+
+
+.disposition {
+  display: flex;
+  min-height: 100vh;
+}
+
+.menu-lateral {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: var(--largeur-menu-lateral);
+  background: var(--couleur-marque-principale);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+}
+
+.contenu-principal {
+  flex: 1;
+  margin-left: var(--largeur-menu-lateral);
+  padding: var(--espacement-xxl);
+}
+
+.carte {
+  background: var(--fond-surface);
+  border: 1px solid var(--bordure-legere);
+  border-radius: var(--arrondi-lg);
+  padding: var(--espacement-xl);
+}
