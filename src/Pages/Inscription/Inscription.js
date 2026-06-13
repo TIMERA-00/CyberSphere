@@ -1,6 +1,6 @@
 import { navigation } from "../../JS/router.js";
 
-function Login() {
+function Inscription() {
   return `
     <link rel="stylesheet" href="./src/css/login.css">
 
@@ -50,7 +50,7 @@ function Login() {
   `;
 }
 
-Login.afterRender = () => {
+Inscription.afterRender = () => {
   const btnSoumettre  = document.getElementById('btn-soumettre');
   const inputEmail    = document.getElementById('input-email');
   const inputMdp      = document.getElementById('input-mdp');
