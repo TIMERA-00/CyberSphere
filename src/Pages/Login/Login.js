@@ -90,7 +90,7 @@ Login.afterRender = () => {
   }
 
   if (lienAccueil) {
-    lienAccueil.addEventListener('click', () => navigation('/'));
+    lienAccueil.addEventListener('click', () => navigation(''));
   }
 };
 
