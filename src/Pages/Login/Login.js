@@ -1,4 +1,5 @@
 import { navigation } from "../../JS/router.js";
+import api from '../../JS/api.js';
 
 function Login() {
   return `
@@ -51,24 +52,45 @@ function Login() {
 }
 
 Login.afterRender = () => {
-  const btnSoumettre  = document.getElementById('btn-soumettre');
-  const inputEmail    = document.getElementById('input-email');
-  const inputMdp      = document.getElementById('input-mdp');
-  const msgErreur     = document.getElementById('msg-erreur');
-  const lienInscript  = document.getElementById('lien-inscription');
-  const lienAccueil   = document.getElementById('lien-accueil');
-
+  const btnSoumettre = document.getElementById('btn-soumettre');
+  const inputEmail   = document.getElementById('input-email');
+  const inputMdp     = document.getElementById('input-mdp');
+  const msgErreur    = document.getElementById('msg-erreur');
+  const lienInscript = document.getElementById('lien-inscription');
+  const lienAccueil  = document.getElementById('lien-accueil');
 
   if (btnSoumettre) {
-    btnSoumettre.addEventListener('click', () => {
+    btnSoumettre.addEventListener('click', async () => {
+
       const email = inputEmail?.value.trim();
       const mdp   = inputMdp?.value.trim();
 
-      if (email === 'timera@cybersphere.com' && mdp === 'timera123') {
-        sessionStorage.setItem('isLoggedIn', 'true');
-        navigation('dashboard');
-      } else {
-        if (msgErreur) msgErreur.classList.add('visible');
+      if (!email || !mdp) {
+        msgErreur.textContent = 'Veuillez remplir tous les champs.';
+        msgErreur.classList.add('visible');
+        return;
+      }
+
+      try {
+        const utilisateurs = await api.obtenirUtilisateurs();
+        const utilisateur  = utilisateurs.find(
+          u => u.email === email && u.motDePasse === mdp
+        );
+
+        if (utilisateur) {
+ 
+          sessionStorage.setItem('isLoggedIn', 'true');
+          sessionStorage.setItem('utilisateur', JSON.stringify(utilisateur));
+          navigation('dashboard');
+        } else {
+          msgErreur.textContent = 'Email ou mot de passe incorrect.';
+          msgErreur.classList.add('visible');
+        }
+
+      } catch (erreur) {
+        console.error(erreur);
+        msgErreur.textContent = 'Erreur serveur. Vérifiez que le serveur est lancé.';
+        msgErreur.classList.add('visible');
       }
     });
   }
@@ -85,13 +107,8 @@ Login.afterRender = () => {
     });
   }
 
-  if (lienInscript) {
-    lienInscript.addEventListener('click', () => navigation('inscription'));
-  }
-
-  if (lienAccueil) {
-    lienAccueil.addEventListener('click', () => navigation(''));
-  }
+  if (lienInscript) lienInscript.addEventListener('click', () => navigation('inscription'));
+  if (lienAccueil)  lienAccueil.addEventListener('click',  () => navigation(''));
 };
 
 export default Login;
