@@ -1,0 +1,123 @@
+{
+  "utilisateurs": [],
+  "alertes": [
+    {
+      "id": 1,
+      "niveau": "critique",
+      "badge": "badge-critique",
+      "texte": "Tentative de brute force SSH — 192.168.1.10",
+      "heure": "09:14"
+    },
+    {
+      "id": 2,
+      "niveau": "critique",
+      "badge": "badge-critique",
+      "texte": "Détection d'exfiltration DNS",
+      "heure": "08:52"
+    },
+    {
+      "id": 3,
+      "niveau": "eleve",
+      "badge": "badge-eleve",
+      "texte": "Scan de ports détecté — 10.0.0.5",
+      "heure": "08:30"
+    },
+    {
+      "id": 4,
+      "niveau": "moyen",
+      "badge": "badge-moyen",
+      "texte": "Connexion d’un compte inactif",
+      "heure": "07:55"
+    }
+  ],
+  "incidents": [
+    {
+      "id": 1,
+      "couleur": "#E24B4A",
+      "titre": "Suspicion de ransomware — Finance-04",
+      "meta": "Il y a 2h · Équipe SOC",
+      "badge": "badge-ouvert",
+      "statut": "Ouvert"
+    },
+    {
+      "id": 2,
+      "couleur": "#EF9F27",
+      "titre": "Accès non autorisé — Firewall-01",
+      "meta": "Il y a 4h · Administrateur",
+      "badge": "badge-en-cours",
+      "statut": "En cours"
+    },
+    {
+      "id": 3,
+      "couleur": "#639922",
+      "titre": "Fuite d’identifiants — Application interne",
+      "meta": "Résolu hier à 15:00",
+      "badge": "badge-resolu",
+      "statut": "Résolu"
+    }
+  ],
+  "activites": [
+    {
+      "id": 1,
+      "couleur": "#378ADD",
+      "texte": "Module Academy terminé : Pentest – Reconnaissance",
+      "heure": "Il y a 10 min"
+    },
+    {
+      "id": 2,
+      "couleur": "#E24B4A",
+      "texte": "Alerte critique assignée à l’équipe SOC",
+      "heure": "Il y a 25 min"
+    },
+    {
+      "id": 3,
+      "couleur": "#639922",
+      "texte": "Agent Wazuh installé sur le serveur Web-02",
+      "heure": "Il y a 1h"
+    },
+    {
+      "id": 4,
+      "couleur": "#EF9F27",
+      "texte": "Rapport hebdomadaire généré et envoyé",
+      "heure": "Il y a 3h"
+    }
+  ],
+  "stats": [
+    {
+      "id": 1,
+      "icone": "🛡️",
+      "fond": "#eff6ff",
+      "valeur": "142",
+      "label": "Alertes actives",
+      "delta": "▲ +12 aujourd’hui",
+      "type": "hausse"
+    },
+    {
+      "id": 2,
+      "icone": "⚠️",
+      "fond": "#fef9c3",
+      "valeur": "8",
+      "label": "Incidents ouverts",
+      "delta": "▼ 3 critiques",
+      "type": "baisse"
+    },
+    {
+      "id": 3,
+      "icone": "✅",
+      "fond": "#f0fdf4",
+      "valeur": "37",
+      "label": "Actifs surveillés",
+      "delta": "▲ +2 cette semaine",
+      "type": "hausse"
+    },
+    {
+      "id": 4,
+      "icone": "🎓",
+      "fond": "#fdf4ff",
+      "valeur": "5",
+      "label": "Modules complétés",
+      "delta": "Progression : 68%",
+      "type": "neutre"
+    }
+  ]
+}
