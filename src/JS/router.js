@@ -1,13 +1,14 @@
-const mesPages=['accueil','Login', 'Inscription', 'Dashboard'];
+const mesPages=['accueil','Login', 'Inscription', 'Dashboard', 'ToolBox'];
 
 const chemins = {
     '' : 'accueil',
     'login' : 'Login',
     'inscription' : 'Inscription',
-    'dashboard' : 'Dashboard'
+    'dashboard' : 'Dashboard',
+    'toolbox' : 'ToolBox'
 }
 
-const pageProteger=['Dashboard'];
+const pageProteger=['Dashboard', 'ToolBox'];
 
 function isLoggedIn(){
     return sessionStorage.getItem('isLoggedIn') === 'true';
