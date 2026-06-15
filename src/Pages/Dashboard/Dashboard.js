@@ -116,12 +116,11 @@ function rendreSidebar(pageActive) {
 
 function Dashboard() {
   return `
-    <link rel="stylesheet" href="./src/css/dashboard.css">
+    // <link rel="stylesheet" href="./src/css/dashboard.css">
     <div class="disposition">
       ${rendreSidebar('dashboard')}
       <main class="contenu-principal">
 
-        <!-- Topbar -->
         <div class="topbar">
           <div>
             <div class="topbar-titre">Dashboard</div>
@@ -130,10 +129,9 @@ function Dashboard() {
           <button class="btn-incident">+ Nouvel incident</button>
         </div>
 
-        <!-- Banner -->
         <div class="banner-hero">
           <div>
-            <div class="banner-hero-titre">Bienvenue sur CyberSphere 👋</div>
+            <div class="banner-hero-titre">Bienvenue sur CyberSphere</div>
             <p class="banner-hero-desc">
               Votre plateforme unifiée de cybersécurité : formation,
               gestion SOC et services de sécurité au même endroit.
@@ -142,7 +140,6 @@ function Dashboard() {
           <div class="banner-hero-emoji">🔐</div>
         </div>
 
-        <!-- Contenu chargé dynamiquement -->
         <div id="dashboard-contenu">
           <div class="chargement">Chargement des données...</div>
         </div>

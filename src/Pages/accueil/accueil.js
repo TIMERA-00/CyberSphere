@@ -2,7 +2,7 @@ import { navigation } from "../../JS/router.js";
 
 function accueil() {
   return `
-    <link rel="stylesheet" href="./src/css/acceuil.css">
+    // <link rel="stylesheet" href="./src/css/acceuil.css">
 
     <nav class="navbar">
       <div class="navbar-logo"> Cyber<span>Sphere</span></div>
