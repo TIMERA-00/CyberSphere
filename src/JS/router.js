@@ -61,9 +61,7 @@ const logout = () =>{
 const handleHashChange = async () => {
     const chemin = window.location.hash.replace(/^#\/?/, '') || '';
     await afficher(chemin);
-    console.log('hash changé :', chemin);
-    
-    
+    console.log('hash changé :', chemin);      
 };
 
 const initRouter = () => {

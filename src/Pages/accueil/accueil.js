@@ -2,13 +2,12 @@ import { navigation } from "../../JS/router.js";
 
 function accueil() {
   return `
-    // <link rel="stylesheet" href="./src/css/acceuil.css">
+    <link rel="stylesheet" href="./src/css/acceuil.css">
 
     <nav class="navbar">
       <div class="navbar-logo"> Cyber<span>Sphere</span></div>
       <button class="btn-connexion" id="btn-vers-login"> Se connecter </button>
     </nav>
-
 
     <section class="hero">
       <h1 class="hero-titre">

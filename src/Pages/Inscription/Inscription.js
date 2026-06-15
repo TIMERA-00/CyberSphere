@@ -70,7 +70,7 @@ function Inscription() {
             <button class="inscription-lien" id="lien-login">
                 Déjà un compte ? Se connecter
             </button>
-            <span class="inscription-separateur">·</span>
+            <span class="inscription-separateur">-------------LEPP LOY DOUGAL NANG KO KHAM-------------</span>
             <button class="inscription-lien" id="lien-accueil">
               <- Retour à l'accueil
             </button>
@@ -169,7 +169,7 @@ Inscription.afterRender = () => {
     }
   });
 
-  if (lienLogin) lienLogin.addEventListener('click', () => navigation('login'));
+  if (lienLogin) lienLogin.addEventListener('click', () => navigation('Dashboard'));
   if (lienAccueil) lienAccueil.addEventListener('click', () => navigation(''));
 };
 

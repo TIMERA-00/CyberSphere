@@ -40,7 +40,7 @@ function Login() {
 
           <div class="login-liens">
             <a class="login-lien" id="lien-inscription"> Pas encore de compte ? S'inscrire </a>
-            <span class="login-separateur">---------{}-----------{}-----------{}---------</span>
+            <span class="login-separateur">--------- DALLAL AKK DIAM SI CYBERSPHERE ---------</span>
             <button class="login-lien" id="lien-accueil"> <- Retour à l'accueil </button>
           </div>
 
