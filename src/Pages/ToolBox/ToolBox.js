@@ -306,37 +306,37 @@ function genererMotDePasse(longueur, maj, min, chiffres, symboles) {
   return mdp;
 }
 
-function analyserMotDePasse(mdp) {
-  let score = 0;
-  const details = [];
+// function analyserMotDePasse(mdp) {
+//   let score = 0;
+//   const details = [];
 
-  if (mdp.length >= 8)  { score += 1; details.push('✅ Longueur suffisante'); }
-  else                  { details.push('❌ Trop court (minimum 8 caractères)'); }
+//   if (mdp.length >= 8)  { score += 1; details.push('✅ Longueur suffisante'); }
+//   else                  { details.push('Trop court (minimum 8 caractères)'); }
 
-  if (mdp.length >= 16) { score += 1; details.push('✅ Très bonne longueur'); }
+//   if (mdp.length >= 16) { score += 1; details.push('✅ Très bonne longueur'); }
 
-  if (/[A-Z]/.test(mdp)) { score += 1; details.push('✅ Majuscules présentes'); }
-  else                    { details.push('❌ Pas de majuscules'); }
+//   if (/[A-Z]/.test(mdp)) { score += 1; details.push('✅ Majuscules présentes'); }
+//   else                    { details.push('Pas de majuscules'); }
 
-  if (/[a-z]/.test(mdp)) { score += 1; details.push('✅ Minuscules présentes'); }
-  else                    { details.push('❌ Pas de minuscules'); }
+//   if (/[a-z]/.test(mdp)) { score += 1; details.push('✅ Minuscules présentes'); }
+//   else                    { details.push('Pas de minuscules'); }
 
-  if (/[0-9]/.test(mdp)) { score += 1; details.push('✅ Chiffres présents'); }
-  else                    { details.push('❌ Pas de chiffres'); }
+//   if (/[0-9]/.test(mdp)) { score += 1; details.push('✅ Chiffres présents'); }
+//   else                    { details.push('Pas de chiffres'); }
 
-  if (/[^A-Za-z0-9]/.test(mdp)) { score += 1; details.push('✅ Symboles présents'); }
-  else                           { details.push('❌ Pas de symboles'); }
+//   if (/[^A-Za-z0-9]/.test(mdp)) { score += 1; details.push('✅ Symboles présents'); }
+//   else                           { details.push('Pas de symboles'); }
 
-  let niveau, couleur, pourcentage;
+//   let niveau, couleur, pourcentage;
 
-  if (score <= 2)      { niveau = '🔴 Très faible'; couleur = '#E24B4A'; pourcentage = 20; }
-  else if (score <= 3) { niveau = '🟠 Faible';      couleur = '#EF9F27'; pourcentage = 40; }
-  else if (score <= 4) { niveau = '🟡 Moyen';       couleur = '#EF9F27'; pourcentage = 60; }
-  else if (score <= 5) { niveau = '🟢 Fort';        couleur = '#639922'; pourcentage = 80; }
-  else                 { niveau = '🟢 Très fort';   couleur = '#639922'; pourcentage = 100; }
+//   if (score <= 2)      { niveau = '🔴 Très faible'; couleur = '#E24B4A'; pourcentage = 20; }
+//   else if (score <= 3) { niveau = '🟠 Faible';      couleur = '#EF9F27'; pourcentage = 40; }
+//   else if (score <= 4) { niveau = '🟡 Moyen';       couleur = '#EF9F27'; pourcentage = 60; }
+//   else if (score <= 5) { niveau = '🟢 Fort';        couleur = '#639922'; pourcentage = 80; }
+//   else                 { niveau = '🟢 Très fort';   couleur = '#639922'; pourcentage = 100; }
 
-  return { niveau, couleur, pourcentage, details };
-}
+//   return { niveau, couleur, pourcentage, details };
+// }
 
 function encoderBase64(texte) {
   return btoa(unescape(encodeURIComponent(texte)));
@@ -346,7 +346,7 @@ function decoderBase64(texte) {
   try {
     return decodeURIComponent(escape(atob(texte)));
   } catch {
-    return '❌ Texte Base64 invalide';
+    return 'Texte Base64 invalide';
   }
 }
 

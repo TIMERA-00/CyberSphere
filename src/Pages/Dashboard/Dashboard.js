@@ -137,7 +137,7 @@ function Dashboard() {
               gestion SOC et services de sécurité au même endroit.
             </p>
           </div>
-          <div class="banner-hero-emoji">🔐</div>
+          <div class="banner-hero-emoji"></div>
         </div>
 
         <div id="dashboard-contenu">
@@ -191,7 +191,7 @@ Dashboard.afterRender = async () => {
                 [60, 40, 75, 50, 90, 65, 80],
                 ['Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam', 'Dim']
               )}
-            </div>
+            </div>;
           </div>
 
           <div class="carte">
