@@ -116,7 +116,7 @@ function rendreSidebar(pageActive) {
 
 function Dashboard() {
   return `
-    // <link rel="stylesheet" href="./src/css/dashboard.css">
+    <link rel="stylesheet" href="./src/css/dashboard.css">
     <div class="disposition">
       ${rendreSidebar('dashboard')}
       <main class="contenu-principal">
