@@ -5,7 +5,7 @@ const chemins = {
     'login' : 'Login',
     'inscription' : 'Inscription',
     'dashboard' : 'Dashboard',
-    'toolbox' : 'ToolBox',
+    'toolbox' : 'ToolBox'
 }
 
 const pageProteger=['Dashboard', 'ToolBox'];

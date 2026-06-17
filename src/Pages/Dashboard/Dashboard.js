@@ -227,7 +227,7 @@ Dashboard.afterRender = async () => {
     if (contenu) {
       contenu.innerHTML = `
         <div style="color:var(--couleur-erreur);padding:var(--espacement-xl);">
-          Impossible de charger les données. Vérifiez que le serveur est lancé.
+          SA SERVER BI EST KEU TAKNA 
         </div>
       `;
     }
